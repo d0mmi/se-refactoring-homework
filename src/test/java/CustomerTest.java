@@ -30,4 +30,17 @@ class CustomerTest {
 
     }
 
+    @Test
+    void htmlStatement() {
+        String expected = "<H1>Rentals for <EM>Kevin</EM></ H1><P>\n" +
+                "Hangover 2: 45.0<BR>\n" +
+                "Hangover 3: 27.0<BR>\n" +
+                "<P>You owe <EM>72.0</EM><P>\n" +
+                "On this rental you earned <EM>3</EM> frequent renter points<P>";
+        String result = customer.htmlStatement();
+        System.out.println(result);
+        Assertions.assertEquals(expected, result);
+
+    }
+
 }
